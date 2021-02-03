@@ -1,0 +1,21 @@
+[package]
+name = "usd"
+version = "0.1.0"
+authors = ["Blessan Abraham <meetblessan@gmail.com>"]
+edition = "2018"
+
+[features]
+resolver_v1 = ["ar/resolver_v1"]
+resolver_v2 = ["ar/resolver_v2"]
+default = ["resolver_v2"]
+std = ["ar/std", "usd-plugin/std"]
+
+[workspace]
+members = [
+    "ar",
+    "plugin"
+]
+
+[dependencies]
+ar = { path = "ar" }
+usd-plugin = { path = "plugin" }
